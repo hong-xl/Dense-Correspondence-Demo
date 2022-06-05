@@ -80,7 +80,7 @@ texture_atlas = get_texture_atlas(args.texture_atlas)
 texture_atlases_dict = get_texture_atlases(args.texture_atlases_map)
 visualizer = VISUALIZERS[vis_spec](
         cfg=cfg,
-        inplace=False,
+        inplace=True,
         device=args.device,
         texture_atlas=texture_atlas,
         texture_atlases_dict=texture_atlases_dict,
@@ -99,4 +99,6 @@ data = extractor(outputs)
 img = img if mode == 'animal' else image
 image_vis = visualizer.visualize(img, data)
 cv2.imwrite(args.output, image_vis)
+
+
 
