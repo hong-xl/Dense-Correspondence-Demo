@@ -45,12 +45,12 @@ args = parser.parse_args()
 
 mode = 'human'  # animal or human
 if mode == 'human':
-    args.input = 'image.jpeg'
+    args.input = 'images/image.jpeg'
     args.cfg = 'configs/densepose_rcnn_R_50_FPN_DL_s1x.yaml'
     args.model = 'https://dl.fbaipublicfiles.com/densepose/cse/densepose_rcnn_R_50_FPN_DL_s1x/251156349/model_final_e96218.pkl'
 
 else:
-    args.input = 'sheep.jpg'
+    args.input = 'images/sheep.jpg'
     args.cfg = 'configs/densepose_rcnn_R_50_FPN_soft_animals_I0_finetune_16k.yaml'
     args.model = 'https://dl.fbaipublicfiles.com/densepose/cse/densepose_rcnn_R_50_FPN_soft_animals_I0_finetune_16k/270727112/model_final_421d28.pkl'
 
